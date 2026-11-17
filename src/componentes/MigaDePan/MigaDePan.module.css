@@ -1,0 +1,35 @@
+/* Miga de pan */
+.miga {
+  border-bottom: 1px solid var(--borde);
+  background: var(--superficie-suave);
+  font-family: var(--fuente-mono);
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+.lista {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 8px var(--margen-lateral);
+  white-space: nowrap;
+}
+
+.item { display: flex; align-items: center; gap: 8px; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-chico);
+  background: var(--superficie);
+  color: var(--texto-suave);
+}
+
+.actual { border-color: var(--verde-hoja); background: var(--verde-hoja); color: #fff; font-weight: 500; }
+
+.separador { font-size: 10px; color: var(--texto-suave); }

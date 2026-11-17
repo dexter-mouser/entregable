@@ -1,0 +1,37 @@
+/* Footer */
+.pie {
+  margin-top: 48px;
+  background: var(--cacao);
+  color: var(--marfil);
+}
+
+.contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 14px var(--margen-lateral) 64px;
+}
+
+.equipo { font-family: var(--fuente-titulo); font-size: 12px; font-weight: 700; }
+.derechos { font-family: var(--fuente-mono); font-size: 10px; opacity: 0.75; }
+
+/* Marcas */
+.marcas { display: flex; flex-wrap: wrap; gap: 8px; }
+.marca {
+  display: grid;
+  place-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #fff;
+}
+.marca img { height: 16px; width: auto; max-width: 60px; object-fit: contain; }
+
+/* Tableta y escritorio: espacio para el botón de tema */
+@media (min-width: 768px) {
+  .contenido { padding-bottom: 14px; padding-right: 180px; }
+}

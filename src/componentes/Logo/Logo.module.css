@@ -1,0 +1,35 @@
+/* Logo */
+.logo { display: inline-flex; align-items: center; gap: 10px; }
+
+.isotipo {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radio);
+  background: var(--verde-hoja);
+  color: #fff;
+  font-size: 16px;
+}
+
+.textos { display: grid; line-height: 1.1; }
+
+.nombre {
+  font-family: var(--fuente-titulo);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--texto);
+}
+
+.subtitulo {
+  font-family: var(--fuente-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Variante sobre fondo verde */
+.claro .isotipo { background: #fff; color: var(--verde-hoja); border-radius: 50%; }
+.claro .nombre { color: #fff; }

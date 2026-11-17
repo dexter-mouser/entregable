@@ -1,0 +1,61 @@
+/* Fuentes */
+@font-face { font-family: 'Poppins'; font-weight: 700; font-display: swap; src: url('../assets/fuentes/poppins-700-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins'; font-weight: 900; font-display: swap; src: url('../assets/fuentes/poppins-900-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 400; font-display: swap; src: url('../assets/fuentes/inter-400-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 600; font-display: swap; src: url('../assets/fuentes/inter-600-latin.woff2') format('woff2'); }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 500; font-display: swap; src: url('../assets/fuentes/ibm-plex-mono-500-latin.woff2') format('woff2'); }
+
+/* Colores de marca */
+:root {
+  --marfil: #f4f4e8;
+  --cacao: #643b22;
+  --verde-noche: #114622;
+  --verde-hondo: #215b33;
+  --verde-hoja: #3d8e33;
+  --verde-nutresa: #1b4332;
+  --verde-nutresa-tarjeta: #133326;
+  --verde-neon: #66d149;
+  --rojo-error: #d32f2f;
+  --naranja-alerta: #e65100;
+
+  /* Tipografía */
+  --fuente-titulo: 'Poppins', system-ui, sans-serif;
+  --fuente-texto: 'Inter', system-ui, sans-serif;
+  --fuente-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Medidas */
+  --radio-chico: 6px;
+  --radio: 12px;
+  --radio-grande: 16px;
+  --radio-hero: 24px;
+  --sombra: 0 2px 8px rgb(27 67 50 / 0.06);
+  --sombra-alta: 0 10px 25px -5px rgb(0 0 0 / 0.12);
+  --ancho-maximo: 1200px;
+  --margen-lateral: clamp(16px, 4vw, 32px);
+}
+
+/* Tema claro (Día) */
+:root, [data-tema='claro'] {
+  --fondo: var(--marfil);
+  --superficie: #ffffff;
+  --superficie-suave: #ecebdc;
+  --borde: #dad9c4;
+  --texto: #3f4040;
+  --texto-suave: #5b5e60;
+  --acento: var(--verde-hoja);
+  --acento-texto: var(--verde-hondo);
+  color-scheme: light;
+}
+
+/* Tema oscuro (Noche) */
+[data-tema='oscuro'] {
+  --fondo: var(--verde-noche);
+  --superficie: var(--verde-nutresa-tarjeta);
+  --superficie-suave: var(--verde-nutresa);
+  --borde: #1f5a3a;
+  --texto: var(--marfil);
+  --texto-suave: #c4d3c8;
+  --acento: var(--verde-hoja);
+  --acento-texto: var(--verde-neon);
+  color-scheme: dark;
+}

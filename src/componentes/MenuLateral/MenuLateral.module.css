@@ -1,0 +1,98 @@
+/* Fondo oscuro */
+.fondo {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(3px);
+}
+
+/* Panel */
+.menu {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(360px, 88vw);
+  padding: 24px;
+  overflow-y: auto;
+  background: var(--verde-hoja);
+  color: #fff;
+  box-shadow: var(--sombra-alta);
+  translate: -100% 0;
+  transition: translate 0.3s ease;
+}
+.abierto { translate: 0 0; }
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.2);
+}
+
+.cerrar {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.cerrar:hover { background: rgb(255 255 255 / 0.2); }
+
+.etiqueta {
+  padding-top: 12px;
+  font-family: var(--fuente-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+/* Enlaces */
+.lista { display: grid; gap: 4px; }
+.enlace {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: var(--radio);
+  background: none;
+  color: #fff;
+  font-family: var(--fuente-titulo);
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s, translate 0.2s;
+}
+.enlace i { width: 24px; font-size: 20px; }
+.enlace:hover { background: rgb(255 255 255 / 0.1); translate: 6px 0; }
+.activo { background: rgb(255 255 255 / 0.2); font-weight: 700; }
+.activo i { color: var(--verde-neon); }
+
+/* Botón inferior */
+.botonCerrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 12px;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: var(--radio-grande);
+  background: rgb(255 255 255 / 0.15);
+  color: #fff;
+  font-family: var(--fuente-titulo);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.botonCerrar:hover { background: rgb(255 255 255 / 0.25); }
