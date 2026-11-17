@@ -1,0 +1,46 @@
+/* Formulario */
+.formulario { display: grid; gap: 16px; }
+
+.fila { display: grid; gap: 16px; }
+
+/* Campo */
+.campo { display: grid; gap: 6px; }
+.campo label { font-family: var(--fuente-titulo); font-size: 13px; font-weight: 700; }
+.campo input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: var(--superficie-suave);
+  color: var(--texto);
+}
+.campo input:focus-visible { outline: 2px solid var(--verde-hoja); outline-offset: 0; }
+
+/* Términos */
+.terminos { display: flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; }
+.terminos input { width: 18px; height: 18px; accent-color: var(--verde-hoja); }
+
+/* Botón */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  border: 0;
+  border-radius: var(--radio);
+  background: var(--verde-hoja);
+  color: #fff;
+  font-family: var(--fuente-titulo);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.boton:hover { background: var(--verde-hondo); }
+.boton:active { translate: 0 1px; }
+
+@media (min-width: 768px) {
+  .fila { grid-template-columns: 1fr 1fr; }
+}

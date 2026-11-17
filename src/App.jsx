@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { MODULOS, MIGA_INICIO, USUARIO } from './datos/modulos.js'
+import { MODULOS, MIGA_INICIO, MIGA_CREAR_CUENTA, USUARIO } from './datos/modulos.js'
 import { MARCAS } from './datos/marcas.js'
 import BarraSuperior from './componentes/BarraSuperior/BarraSuperior.jsx'
 import MenuLateral from './componentes/MenuLateral/MenuLateral.jsx'
@@ -7,6 +7,7 @@ import MigaDePan from './componentes/MigaDePan/MigaDePan.jsx'
 import PiePagina from './componentes/PiePagina/PiePagina.jsx'
 import BotonTema from './componentes/BotonTema/BotonTema.jsx'
 import Inicio from './vistas/Inicio/Inicio.jsx'
+import CrearCuenta from './vistas/CrearCuenta/CrearCuenta.jsx'
 
 const CLAVE_TEMA = 'sazon-tema'
 
@@ -22,6 +23,8 @@ function leerTema() {
 export default function App() {
   const [tema, setTema] = useState(leerTema)
   const [menuAbierto, setMenuAbierto] = useState(false)
+  const [vista, setVista] = useState('inicio')
+  const esCrearCuenta = vista === 'crearCuenta'
 
   // Aplicar y guardar el tema
   useEffect(() => {
@@ -48,11 +51,12 @@ export default function App() {
   return (
     <>
       <MenuLateral modulos={MODULOS} estaAbierto={menuAbierto} alCerrar={() => setMenuAbierto(false)} />
-      <BarraSuperior usuario={USUARIO} alAbrirMenu={() => setMenuAbierto(true)} />
-      <MigaDePan elementos={MIGA_INICIO} />
+      <BarraSuperior usuario={USUARIO} alAbrirMenu={() => setMenuAbierto(true)} alIrAlInicio={() => setVista('inicio')} />
+      <MigaDePan elementos={esCrearCuenta ? MIGA_CREAR_CUENTA : MIGA_INICIO} />
 
+      {/* Vista actual */}
       <main className="contenedor">
-        <Inicio />
+        {esCrearCuenta ? <CrearCuenta /> : <Inicio alCrearCuenta={() => setVista('crearCuenta')} />}
       </main>
 
       <PiePagina marcas={MARCAS} />

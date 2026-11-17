@@ -39,6 +39,10 @@
 .botonMenu i { font-size: 18px; line-height: 1; }
 .botonMenu:hover { background: var(--verde-hoja); color: #fff; }
 
+/* Logo como botón al inicio */
+.inicio { padding: 0; border: 0; background: none; color: inherit; cursor: pointer; }
+.inicio:hover { opacity: 0.85; }
+
 /* Buscador */
 .buscador { position: relative; flex: 1; max-width: 560px; color: var(--texto-suave); }
 .buscador i { position: absolute; left: 14px; top: 50%; translate: 0 -50%; font-size: 12px; }

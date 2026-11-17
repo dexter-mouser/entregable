@@ -10,10 +10,15 @@ export const MODULOS = [
   { id: 'perfil', titulo: 'Mi Perfil', icono: 'bi-person-circle' },
 ]
 
-// Miga de pan de la página inicial
+// Miga de pan de cada vista
 export const MIGA_INICIO = [
   { texto: 'Inicio', icono: 'bi-house' },
   { texto: 'Dashboard central', icono: 'bi-speedometer2' },
+]
+
+export const MIGA_CREAR_CUENTA = [
+  { texto: 'Inicio', icono: 'bi-house' },
+  { texto: 'Crear cuenta', icono: 'bi-person-plus' },
 ]
 
 // Usuario de ejemplo

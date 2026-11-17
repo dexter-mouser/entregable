@@ -1,7 +1,7 @@
 import estilos from './Hero.module.css'
 
 // Banner principal de bienvenida
-export default function Hero() {
+export default function Hero({ alCrearCuenta }) {
   return (
     <section className={estilos.hero} aria-labelledby="hero-titulo">
       <span className={estilos.insignia}>
@@ -15,7 +15,7 @@ export default function Hero() {
         <button type="button" className={estilos.principal}>
           <i className="bi bi-grid" aria-hidden="true"></i> Explorar módulos
         </button>
-        <button type="button" className={estilos.secundario}>
+        <button type="button" className={estilos.secundario} onClick={alCrearCuenta}>
           <i className="bi bi-person-plus" aria-hidden="true"></i> Crear cuenta
         </button>
       </div>

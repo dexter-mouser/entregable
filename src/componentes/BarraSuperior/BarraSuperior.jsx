@@ -2,7 +2,7 @@ import Logo from '../Logo/Logo.jsx'
 import estilos from './BarraSuperior.module.css'
 
 // Barra superior: menú, logo, buscador y perfil
-export default function BarraSuperior({ usuario, alAbrirMenu }) {
+export default function BarraSuperior({ usuario, alAbrirMenu, alIrAlInicio }) {
   return (
     <header className={estilos.barra}>
       <div className={estilos.contenido}>
@@ -11,7 +11,9 @@ export default function BarraSuperior({ usuario, alAbrirMenu }) {
             <i className="bi bi-list" aria-hidden="true"></i>
             <span>Menú</span>
           </button>
-          <Logo />
+          <button type="button" className={estilos.inicio} onClick={alIrAlInicio} aria-label="Sa·zón, ir al inicio">
+            <Logo />
+          </button>
         </div>
 
         {/* Buscador */}

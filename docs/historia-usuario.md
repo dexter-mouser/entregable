@@ -12,10 +12,11 @@ Proyecto Sa·zón · Historia propia de José Manuel Botero Giraldo.
 
 1. Desde la página inicial, el botón «Crear cuenta» abre la vista de registro.
 2. El formulario pide: nombre completo, correo, contraseña, confirmación de contraseña y aceptación de términos.
-3. Todos los campos son obligatorios; el correo debe tener formato válido y la contraseña al menos 8 caracteres.
-4. Si las contraseñas no coinciden o falta un dato, se muestra el error junto al campo y no se envía.
-5. Al enviar con datos válidos, aparece un mensaje de bienvenida con el nombre (datos simulados, sin backend).
-6. La vista usa el kit de marca Sa·zón, funciona en tema Día y Noche, en móvil y escritorio, y con teclado.
+3. Cada campo tiene su etiqueta visible y el botón «Crear cuenta» cierra el formulario.
+4. El logo de la barra superior regresa a la página inicial.
+5. La vista usa el kit de marca Sa·zón, funciona en tema Día y Noche, en móvil y escritorio, y con teclado.
+
+Alcance de este momento: solo componentes visuales. La validación y el envío de datos quedan para cuando haya backend.
 
 ## Ubicación de los componentes
 
